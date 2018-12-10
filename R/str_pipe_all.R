@@ -270,3 +270,59 @@ toupper_names <- function(d){
   paste0(x, collapse = y)
 }
 
+
+#' @title  Remove matched patterns in a string
+#'
+#' @param x A character vector
+#' @param y Character string or pattern to remove
+#' @details This function is a pipe version of stringr::str_remove
+#' @return A character vector
+#' @examples
+#' 'totoro' %rm% 'to'
+#' @export
+`%rm%` <- function(x, y){
+  stringr::str_remove(x, y)
+}
+
+#' @title  Remove matched patterns in a string
+#'
+#' @param x A character vector
+#' @param y Character string or pattern to remove
+#'
+#' @details This function is a pipe version of stringr::str_remove_all
+#' @return A character vector
+#' @examples
+#' 'totoro' %rmall% 'to'
+#' @export
+`%rmall%` <- function(x, y){
+  stringr::str_remove_all(x, y)
+}
+
+#' @title  Replace matched patterns in a string
+#'
+#' @param x A character vector
+#' @param y.z A vector of two string specifying pattern for match and replace
+#' @details This function is a pipe version of stringr::str_replace
+#' @return A character vector
+#' @examples
+#' 'totoro12_13' %re% c('[0-9]+', 'to')
+#'
+#' @export
+`%re%` <- function(x, y.z){
+  stringr::str_replace(x, y.z[1], y.z[2])
+}
+
+#' @title  Replace matched patterns in a string
+#'
+#' @param x A character vector
+#' @param y.z A vector of two string specifying pattern for match and replace
+#' @details This function is a pipe version of stringr::str_replace_all
+#' @return A character vector
+#'
+#' @examples
+#' 'totoro12_13' %reall% c('[0-9]+', 'to')
+#'
+#' @export
+`%reall%` <- function(x, y.z){
+  stringr::str_replace_all(x, y.z[1], y.z[2])
+}
