@@ -17,6 +17,9 @@ a \%,\% b
 \value{
 The concatenation of \code{x} and \code{y} strings
 }
+\details{
+This functions is a pipe version of paste
+}
 \examples{
 'Hello' \% \% 'world'
 'Your pastas tastes like' \% \% '\%>\%'

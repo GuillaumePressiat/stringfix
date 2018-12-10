@@ -14,6 +14,9 @@ x \%gic\% y
 \value{
 A boolean
 }
+\details{
+This functions is a pipe version of grepl with ignore.case = TRUE
+}
 \examples{
 
 'pig' \%gic\% 'The pig is in the corn'

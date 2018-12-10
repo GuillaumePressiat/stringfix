@@ -14,6 +14,9 @@ x \%count\% y
 \value{
 A vector of integer
 }
+\details{
+This functions is a pipe version of stringr::count
+}
 \examples{
 
 fruit <- c("apple", "banana", "pear", "pineapple")

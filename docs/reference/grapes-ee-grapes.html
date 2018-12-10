@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Left pad strings the way of pipe operator — %lpad% • stringfix</title>
+<title>Explode a character vector — %ee% • stringfix</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:title" content="Left pad strings the way of pipe operator — %lpad%" />
+<meta property="og:title" content="Explode a character vector — %ee%" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -90,42 +90,55 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Left pad strings the way of pipe operator</h1>
+    <h1>Explode a character vector</h1>
     
-    <div class="hidden name"><code>grapes-lpad-grapes.Rd</code></div>
+    <div class="hidden name"><code>grapes-ee-grapes.Rd</code></div>
     </div>
 
     <div class="ref-description">
 
     </div>
 
-    <pre class="usage"><span class='no'>string</span> <span class='kw'>%lpad%</span> <span class='no'>pad.width</span></pre>
+    <pre class="usage"><span class='no'>x</span> <span class='kw'>%ee%</span> <span class='no'>p</span></pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>string</th>
-      <td><p>Character vector or NULL</p></td>
+      <th>x</th>
+      <td><p>A character vector</p></td>
     </tr>
     <tr>
-      <th>pad.width</th>
-      <td><p>string or .digit where to indicate the pad and widht</p></td>
+      <th>p</th>
+      <td><p>A pattern</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A character vector or NULL</p>
+    <p>a tibble</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This functions is a pipe version of stringr::pad</p>
+    <p>This function is a pipe version of stringr::str_split for a character vector, with simplify = TRUE</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fl'>5</span> <span class='kw'>%lpad%</span> <span class='st'>'0.5'</span></div><div class='output co'>#&gt; [1] "00005"</div><div class='input'><span class='fl'>5</span> <span class='kw'>%lpad%</span>   <span class='fl'>.5</span></div><div class='output co'>#&gt; [1] "00005"</div><div class='input'><span class='fl'>5</span> <span class='kw'>%lpad%</span>  <span class='st'>'.5'</span></div><div class='output co'>#&gt; [1] "    5"</div><div class='input'><span class='fl'>5</span> <span class='kw'>%lpad%</span> <span class='st'>'2.5'</span></div><div class='output co'>#&gt; [1] "22225"</div><div class='input'><span class='st'>'é'</span> <span class='kw'>%lpad%</span> <span class='st'>'é.5'</span></div><div class='output co'>#&gt; [1] "ééééé"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>c</span>(<span class='st'>'The little horse under the weather'</span>,
+<span class='st'>"He who gave courage"</span>,
+<span class='st'>"It was a little white horse"</span>,
+<span class='st'>'All behind, all behind'</span>,
+<span class='st'>"It was time of the little white horse"</span>,
+<span class='st'>"All behind him before"</span>) <span class='kw'>%ee%</span> <span class='st'>" |'|, "</span></div><div class='output co'>#&gt; # A tibble: 6 x 8
+#&gt;   V1    V2     V3    V4      V5    V6      V7    V8   
+#&gt;   &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;
+#&gt; 1 The   little horse under   the   weather ""    ""   
+#&gt; 2 He    who    gave  courage ""    ""      ""    ""   
+#&gt; 3 It    was    a     little  white horse   ""    ""   
+#&gt; 4 All   behind all   behind  ""    ""      ""    ""   
+#&gt; 5 It    was    time  of      the   little  white horse
+#&gt; 6 All   behind him   before  ""    ""      ""    ""   </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

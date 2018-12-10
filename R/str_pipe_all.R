@@ -4,6 +4,8 @@
 
 #' @title paste0 in the way of pipe operator
 #'
+#' @details This functions is a pipe version of paste0
+#'
 #' @param x A string (or coerced to)
 #' @param y A string (or coerced to)
 #' @return The concatenation of \code{x} and \code{y} strings
@@ -19,6 +21,8 @@
 
 
 #' @title paste ', ' in the way of pipe operator
+#'
+#' @details This functions is a pipe version of paste
 #'
 #' @param x A string (or coerced to)
 #' @param y A string (or coerced to)
@@ -40,6 +44,8 @@
 
 #' @title grepl in the way of pipe operator (case sensitive)
 #'
+#' @details This functions is a pipe version of grepl
+#'
 #' @param x string where to search pattern with grepl
 #' @param y pattern submitted to grepl
 #' @return A boolean
@@ -54,6 +60,8 @@
 
 
 #' @title grepl in the way of pipe operator (ignore case)
+#'
+#' @details This functions is a pipe version of grepl with ignore.case = TRUE
 #'
 #' @param x string where to search pattern with grepl
 #' @param y pattern submitted to grepl
@@ -86,6 +94,8 @@
 
 #' @title substring in the way of pipe operator
 #'
+#' @details This functions is a pipe version of substr
+#'
 #' @param x Vector or NULL, values to be substringed
 #' @param y.z  A character or 0.digit to call substr
 #' @return A string or NULL
@@ -106,6 +116,7 @@
 
 #' @title count pattern in strings the way of pipe operator
 #'
+#' @details This functions is a pipe version of stringr::count
 #' @param x Pattern to count in string
 #' @param y  string where to count pattern
 #' @return A vector of integer
@@ -126,6 +137,7 @@
 #' @param string Character vector or NULL
 #' @param pad.width string or .digit where to indicate the pad and widht
 #' @return A character vector or NULL
+#' @details This functions is a pipe version of stringr::pad
 #' @examples
 #'
 #' 5 %lpad% '0.5'
@@ -145,8 +157,9 @@
 #' @title Right pad strings the way of pipe operator
 #'
 #' @param string Character vector or NULL
-#' @param pad.width string or .digit where to indicate the pad and widht
+#' @param pad.width string or .digit where to indicate the pad and width
 #' @return A character vector or NULL
+#' @details This functions is a pipe version of stringr::pad
 #' @examples
 #'
 #' 5 %rpad% '.2'
@@ -163,8 +176,9 @@
 #' @title Both side pad strings the way of pipe operator
 #'
 #' @param string Character vector or NULL
-#' @param pad.width string or .digit where to indicate the pad and widht
+#' @param pad.width string or .digit where to indicate the pad and width
 #' @return A character vector or NULL
+#' @details This functions is a pipe version of stringr::pad
 #' @examples
 #'
 #' 5 %pad% '.3'
@@ -205,3 +219,54 @@ toupper_names <- function(d){
   names(d) <- toupper(names(d))
   d
 }
+
+
+#' @title  Explode a character string
+#'
+#' @param x A character string
+#' @param p A pattern
+#' @return a character vector
+#' @details This function is a pipe version of stringr::str_split for a character string, with simplify = TRUE
+#' @examples
+#' 'The little horse under the weather' %e% ' '
+#' 'The little horse under the weather' %e% ''
+#' @export
+`%e%` <- function(x, p){
+  stringr::str_split(x, p, simplify = TRUE)[1,]
+}
+
+#' @title  Explode a character vector
+#'
+#' @param x A character vector
+#' @param p A pattern
+#' @return a tibble
+#' @import tibble
+#' @details This function is a pipe version of stringr::str_split for a character vector, with simplify = TRUE
+#' @examples
+#' c('The little horse under the weather',
+#' "He who gave courage",
+#' "It was a little white horse",
+#' 'All behind, all behind',
+#' "It was time of the little white horse",
+#' "All behind him before") %ee% " |'|, "
+#'
+#' @export
+`%ee%` <- function(x, p){
+  tibble::as_tibble(stringr::str_split(x, p, simplify = TRUE))
+}
+
+
+#' @title  Collapse a character vector to a character string
+#'
+#' @param x A character vector
+#' @param y Character string, collapse parameter of paste0
+#' @details This function is a pipe version of paste0 with collapse parameter to specify
+#' @return A character string
+#' @examples
+#' c('N', 'F', 'K', 'A') %c% ' '
+#' 'All I wanna do' %e% '' %c% ''
+#' @export
+`%c%` <-  function(x, y){
+  paste0(x, collapse = y)
+}
+

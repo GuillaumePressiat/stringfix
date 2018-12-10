@@ -14,6 +14,9 @@ x \%s\% yz
 \value{
 A string or NULL
 }
+\details{
+This functions is a pipe version of substr
+}
 \examples{
 
 'NFKA008' \%s\% '1.4'

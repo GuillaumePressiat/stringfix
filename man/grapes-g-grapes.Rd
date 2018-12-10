@@ -14,6 +14,9 @@ x \%g\% y
 \value{
 A boolean
 }
+\details{
+This functions is a pipe version of grepl
+}
 \examples{
 
 'pig' \%g\% 'The pig is in the corn'

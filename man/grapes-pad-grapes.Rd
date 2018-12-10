@@ -9,10 +9,13 @@ string \%pad\% pad.width
 \arguments{
 \item{string}{Character vector or NULL}
 
-\item{pad.width}{string or .digit where to indicate the pad and widht}
+\item{pad.width}{string or .digit where to indicate the pad and width}
 }
 \value{
 A character vector or NULL
+}
+\details{
+This functions is a pipe version of stringr::pad
 }
 \examples{
 

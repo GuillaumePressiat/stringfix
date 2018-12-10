@@ -14,6 +14,9 @@ string \%lpad\% pad.width
 \value{
 A character vector or NULL
 }
+\details{
+This functions is a pipe version of stringr::pad
+}
 \examples{
 
 5 \%lpad\% '0.5'
