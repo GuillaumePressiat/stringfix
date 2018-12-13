@@ -21,6 +21,6 @@ This functions is a pipe version of substr
 
 'NFKA008' \%s\% '1.4'
 'NFKA008' \%s\% .4
-'where is' \% \% ('the pig is in the corn' \%s\% '1.7') \% \% '?'
+'where is' \% \% ('the pig is in the cornfield' \%s\% '1.7') \%+\% '?'
 'NFKA008' \%s\% 5.7
 }

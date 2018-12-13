@@ -19,6 +19,6 @@ This functions is a pipe version of grepl with ignore.case = TRUE
 }
 \examples{
 
-'pig' \%gic\% 'The pig is in the corn'
-'PIG' \%gic\% 'The PiG is in the corn'
+'pig' \%gic\% 'The pig is in the cornfield'
+'PIG' \%gic\% 'The PiG is in the cornfield'
 }

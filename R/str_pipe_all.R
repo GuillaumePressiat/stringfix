@@ -12,7 +12,7 @@
 #'
 #' @examples
 #' 'Hello ' %+% 'world'
-#' 'Your pastas tastes like ' %+% '%>%'
+#' 'Your pastas taste like ' %+% '%>%'
 #' 'coco' %+% 'bolo'
 #' @export
 `%+%` <- function(a,b){
@@ -29,14 +29,14 @@
 #' @return The concatenation of \code{x} and \code{y} strings
 #' @examples
 #' 'Hello' % % 'world'
-#' 'Your pastas tastes like' % % '%>%'
+#' 'Your pastas taste like' % % '%>%'
 #' @export
 `% %` <- function(a,b){
   paste(a, b)
 }
 #' @examples
 #' 'Hello' %,% 'world...'
-#' 'Your pastas tastes like ' %+% '%>%...' %,% 'or %>>%...'
+#' 'Your pastas taste like ' %+% '%>%...' %,% 'or %>>%...'
 #' @export
 `%,%` <- function(a, b){
   paste(a,b, sep = ", ")
@@ -51,8 +51,8 @@
 #' @return A boolean
 #' @examples
 #'
-#' 'pig' %g% 'The pig is in the corn'
-#' 'Pig' %g% 'The pig is in the corn'
+#' 'pig' %g% 'The pig is in the cornfield'
+#' 'Pig' %g% 'The pig is in the cornfield'
 #' @export
 `%g%` <- function(x,y) {
   grepl(x, y)
@@ -68,8 +68,8 @@
 #' @return A boolean
 #' @examples
 #'
-#' 'pig' %gic% 'The pig is in the corn'
-#' 'PIG' %gic% 'The PiG is in the corn'
+#' 'pig' %gic% 'The pig is in the cornfield'
+#' 'PIG' %gic% 'The PiG is in the cornfield'
 #' @export
 `%gic%` <- function(x,y) {
   grepl(x, y, ignore.case = TRUE)
@@ -103,7 +103,7 @@
 #'
 #' 'NFKA008' %s% '1.4'
 #' 'NFKA008' %s% .4
-#' 'where is' % % ('the pig is in the corn' %s% '1.7') % % '?'
+#' 'where is' % % ('the pig is in the cornfield' %s% '1.7') %+% '?'
 #' 'NFKA008' %s% 5.7
 #' @export
 `%s%` <- function(x, yz){

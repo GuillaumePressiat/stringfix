@@ -19,6 +19,6 @@ This functions is a pipe version of grepl
 }
 \examples{
 
-'pig' \%g\% 'The pig is in the corn'
-'Pig' \%g\% 'The pig is in the corn'
+'pig' \%g\% 'The pig is in the cornfield'
+'Pig' \%g\% 'The pig is in the cornfield'
 }

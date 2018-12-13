@@ -19,6 +19,6 @@ This functions is a pipe version of paste0
 }
 \examples{
 'Hello ' \%+\% 'world'
-'Your pastas tastes like ' \%+\% '\%>\%'
+'Your pastas taste like ' \%+\% '\%>\%'
 'coco' \%+\% 'bolo'
 }

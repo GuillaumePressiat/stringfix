@@ -22,7 +22,7 @@ This functions is a pipe version of paste
 }
 \examples{
 'Hello' \% \% 'world'
-'Your pastas tastes like' \% \% '\%>\%'
+'Your pastas taste like' \% \% '\%>\%'
 'Hello' \%,\% 'world...'
-'Your pastas tastes like ' \%+\% '\%>\%...' \%,\% 'or \%>>\%...'
+'Your pastas taste like ' \%+\% '\%>\%...' \%,\% 'or \%>>\%...'
 }
