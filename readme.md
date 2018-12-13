@@ -16,8 +16,8 @@
 ```r
 'Hello ' %+% 'world'
 #> [1] "Hello world"
-'Your pastas tastes like ' %+% '%>%'
-#> [1] "Your pastas tastes like %>%"
+'Your pastas taste like ' %+% '%>%'
+#> [1] "Your pastas taste like %>%"
 'coco' %+% 'bolo'
 #> [1] "cocobolo"
 ```
@@ -25,12 +25,12 @@
 ```r
 'Hello' % % 'world'
 #> [1] "Hello world"
-'Your pastas tastes like' % % '%>%'
-#> [1] "Your pastas tastes like %>%"
+'Your pastas taste like' % % '%>%'
+#> [1] "Your pastas taste like %>%"
 'Hello' %,% 'world...'
 #> [1] "Hello, world..."
-'Your pastas tastes like ' %+% '%>%...' %,% 'or %>>%...'
-#> [1] "Your pastas tastes like %>%..., or %>>%..."
+'Your pastas taste like ' %+% '%>%...' %,% 'or %>>%...'
+#> [1] "Your pastas taste like %>%..., or %>>%..."
 ```
 
 #### grepl
@@ -38,18 +38,18 @@
 ##### Case sensitive
 
 ```r
-'pig' %g% 'The pig is in the corn'
+'pig' %g% 'The pig is in the cornfield'
 #> [1] TRUE
-'Pig' %g% 'The pig is in the corn'
+'Pig' %g% 'The pig is in the cornfield'
 #> [1] FALSE
 ```
 
 ##### Case insensitive (ignore.case)
 
 ```r
-'pig' %gic% 'The pig is in the corn'
+'pig' %gic% 'The pig is in the cornfield'
 #> [1] TRUE
-'PIG' %gic% 'The PiG is in the corn'
+'PIG' %gic% 'The PiG is in the cornfield'
 #> [1] TRUE
 ```
 
@@ -60,8 +60,8 @@
 #> [1] "NFKA"
 'NFKA008' %s% .4
 #> [1] "NFKA"
-'where is' % % ('the pig is in the corn' %s% '1.7') % % '?'
-#> [1] "where is the pig ?"
+'where is' % % ('the pig is in the cornfield' %s% '1.7') %+% '?'
+#> [1] "where is the pig?"
 ```
 
 #### count
