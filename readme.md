@@ -1,5 +1,10 @@
 # stringfix : infix operators for strings manipulations
 
+
+```r
+devtools::install_github("GuillaumePressiat/stringfix")
+```
+
 #### Some infix operators and other functions to make syntax more left to right. 
 
 
