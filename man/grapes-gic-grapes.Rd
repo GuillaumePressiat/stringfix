@@ -14,6 +14,9 @@ x \%gic\% y
 \value{
 A boolean
 }
+\description{
+grepl in the way of pipe operator (ignore case)
+}
 \details{
 This functions is a pipe version of grepl with ignore.case = TRUE
 }

@@ -14,6 +14,9 @@ x \%s\% yz
 \value{
 A string or NULL
 }
+\description{
+substring in the way of pipe operator
+}
 \details{
 This functions is a pipe version of substr
 }

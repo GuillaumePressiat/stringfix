@@ -14,6 +14,9 @@ a \%+\% b
 \value{
 The concatenation of \code{x} and \code{y} strings
 }
+\description{
+paste0 in the way of pipe operator
+}
 \details{
 This functions is a pipe version of paste0
 }

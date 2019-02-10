@@ -12,6 +12,9 @@ tolower_names(d)
 \value{
 A tibble
 }
+\description{
+Make names of a tibble tolower
+}
 \examples{
 library(magrittr)
 iris \%>\% tolower_names \%>\% head

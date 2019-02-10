@@ -326,3 +326,16 @@ toupper_names <- function(d){
 `%reall%` <- function(x, y.z){
   stringr::str_replace_all(x, y.z[1], y.z[2])
 }
+
+#' @title  Run transcoder shiny app
+#'
+#' @export
+run_transcoder <- function(launch.browser = getOption("shiny.launch.browser", interactive())) {
+  appDir <- system.file("transcoder", "transcoder", package = "stringfix")
+  if (appDir == "") {
+    # https://deanattali.com/2015/04/21/r-package-shiny-app/
+    stop("Could not find transcoder directory. Try re-installing `stringfix`.", call. = FALSE)
+  }
+
+  shiny::runApp(appDir, display.mode = "normal", launch.browser = launch.browser)
+}

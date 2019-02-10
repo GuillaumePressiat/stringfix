@@ -14,6 +14,9 @@ x \%count\% y
 \value{
 A vector of integer
 }
+\description{
+count pattern in strings the way of pipe operator
+}
 \details{
 This functions is a pipe version of stringr::count
 }

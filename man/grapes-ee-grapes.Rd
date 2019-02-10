@@ -14,6 +14,9 @@ x \%ee\% p
 \value{
 a tibble
 }
+\description{
+Explode a character vector
+}
 \details{
 This function is a pipe version of stringr::str_split for a character vector, with simplify = TRUE
 }

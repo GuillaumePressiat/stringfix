@@ -12,6 +12,9 @@ toupper_names(d)
 \value{
 A tibble
 }
+\description{
+Make names of a tibble toupper
+}
 \examples{
 library(magrittr)
 iris \%>\% toupper_names \%>\% head

@@ -14,6 +14,9 @@ x \%rm\% y
 \value{
 A character vector
 }
+\description{
+Remove matched patterns in a string
+}
 \details{
 This function is a pipe version of stringr::str_remove
 }

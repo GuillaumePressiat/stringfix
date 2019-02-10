@@ -14,6 +14,9 @@ x \%reall\% y.z
 \value{
 A character vector
 }
+\description{
+Replace matched patterns in a string
+}
 \details{
 This function is a pipe version of stringr::str_replace_all
 }

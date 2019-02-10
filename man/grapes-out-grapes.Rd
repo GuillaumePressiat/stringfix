@@ -14,6 +14,9 @@ a \%out\% b
 \value{
 a boolean
 }
+\description{
+negation of in infix operator
+}
 \details{
 This function comes from https://github.com/pierucci/rmngb/tree/master/rmngb
 }

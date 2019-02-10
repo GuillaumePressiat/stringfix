@@ -14,6 +14,9 @@ x \%e\% p
 \value{
 a character vector
 }
+\description{
+Explode a character string
+}
 \details{
 This function is a pipe version of stringr::str_split for a character string, with simplify = TRUE
 }

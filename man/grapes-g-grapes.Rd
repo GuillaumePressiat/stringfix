@@ -14,6 +14,9 @@ x \%g\% y
 \value{
 A boolean
 }
+\description{
+grepl in the way of pipe operator (case sensitive)
+}
 \details{
 This functions is a pipe version of grepl
 }

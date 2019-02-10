@@ -14,6 +14,9 @@ x \%c\% y
 \value{
 A character string
 }
+\description{
+Collapse a character vector to a character string
+}
 \details{
 This function is a pipe version of paste0 with collapse parameter to specify
 }

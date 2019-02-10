@@ -14,6 +14,9 @@ string \%pad\% pad.width
 \value{
 A character vector or NULL
 }
+\description{
+Both side pad strings the way of pipe operator
+}
 \details{
 This functions is a pipe version of stringr::pad
 }
