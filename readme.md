@@ -1,9 +1,18 @@
+<!-- badges: start -->
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![https://guillaumepressiat.r-universe.dev/badges/stringfix](https://guillaumepressiat.r-universe.dev/badges/stringfix)](https://guillaumepressiat.r-universe.dev/ui#builds)
+<!-- badges: end -->
+
+
 # stringfix : infix operators for strings manipulations
 
 
 ```r
 devtools::install_github("GuillaumePressiat/stringfix")
 ```
+
+
+
 
 #### Some infix operators and other functions to make syntax more left to right. 
 
