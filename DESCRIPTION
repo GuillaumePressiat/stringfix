@@ -3,8 +3,8 @@ Type: Package
 Title: Strings manipulations in a piping way of coding
 Version: 0.1.0
 Author: Guillaume Pressiat
-Authors@R: c(person('Guillaume Pressiat', role = c("aut", "cre"), email = "guillaume.pressiat@gmail.com"))
-Maintainer: Guillaume Pressiat <guillaume.pressiat@gmail.com>
+Authors@R: c(person('Guillaume Pressiat', role = c("aut", "cre"), email = "guillaume.pressiat@chu-brest.fr"))
+Maintainer: Guillaume Pressiat <guillaume.pressiat@chu-brest.fr>
 Description: Some infix operators and other utility functions to make syntax more and more left to right. In a manner of coding, I just want to say %>% nothing.
 License: GPL-2
 Encoding: UTF-8
