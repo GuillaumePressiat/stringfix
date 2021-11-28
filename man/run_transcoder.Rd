@@ -4,8 +4,9 @@
 \alias{run_transcoder}
 \title{Run transcoder shiny app}
 \usage{
-run_transcoder(launch.browser = getOption("shiny.launch.browser",
-  interactive()))
+run_transcoder(
+  launch.browser = getOption("shiny.launch.browser", interactive())
+)
 }
 \description{
 Run transcoder shiny app
