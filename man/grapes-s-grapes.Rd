@@ -9,7 +9,7 @@ x \%s\% yz
 \arguments{
 \item{x}{Vector or NULL, values to be substringed}
 
-\item{y.z}{A character or 0.digit to call substr}
+\item{yz}{A character or 0.digit to call substr}
 }
 \value{
 A string or NULL

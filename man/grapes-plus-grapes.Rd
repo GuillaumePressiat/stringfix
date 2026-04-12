@@ -7,9 +7,9 @@
 a \%+\% b
 }
 \arguments{
-\item{x}{A string (or coerced to)}
+\item{a}{A string (or coerced to)}
 
-\item{y}{A string (or coerced to)}
+\item{b}{A string (or coerced to)}
 }
 \value{
 The concatenation of \code{x} and \code{y} strings

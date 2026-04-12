@@ -16,6 +16,8 @@ A tibble
 Make names of a tibble tolower
 }
 \examples{
+\dontrun{
 library(magrittr)
 iris \%>\% tolower_names \%>\% head
+}
 }

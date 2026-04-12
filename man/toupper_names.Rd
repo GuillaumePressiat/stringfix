@@ -16,6 +16,9 @@ A tibble
 Make names of a tibble toupper
 }
 \examples{
+\dontrun{
 library(magrittr)
 iris \%>\% toupper_names \%>\% head
+}
+
 }

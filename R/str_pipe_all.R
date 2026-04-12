@@ -1,13 +1,13 @@
 
-
 #' @import stringr
 
 #' @title paste0 in the way of pipe operator
 #'
 #' @details This functions is a pipe version of paste0
 #'
-#' @param x A string (or coerced to)
-#' @param y A string (or coerced to)
+#' @param a A string (or coerced to)
+#' @param b A string (or coerced to)
+#'
 #' @return The concatenation of \code{x} and \code{y} strings
 #'
 #' @examples
@@ -24,19 +24,29 @@
 #'
 #' @details This functions is a pipe version of paste
 #'
-#' @param x A string (or coerced to)
-#' @param y A string (or coerced to)
+#' @param a A string (or coerced to)
+#' @param b A string (or coerced to)
 #' @return The concatenation of \code{x} and \code{y} strings
 #' @examples
 #' 'Hello' % % 'world'
 #' 'Your pastas taste like' % % '%>%'
+#'
 #' @export
 `% %` <- function(a,b){
   paste(a, b)
 }
 #' @examples
 #' 'Hello' %,% 'world...'
+#'
+#' @param a A string (or coerced to)
+#' @param b A string (or coerced to)
+#'
+#' @examples
+#' \dontrun{
+#' library(magrittr)
 #' 'Your pastas taste like ' %+% '%>%...' %,% 'or %>>%...'
+#' }
+#'
 #' @export
 `%,%` <- function(a, b){
   paste(a,b, sep = ", ")
@@ -77,7 +87,6 @@
 
 #' @title negation of in infix operator
 #'
-#'
 #' @details This function comes from https://github.com/pierucci/rmngb/tree/master/rmngb
 #'
 #' @param a Vector or NULL, values to be matched
@@ -97,7 +106,7 @@
 #' @details This functions is a pipe version of substr
 #'
 #' @param x Vector or NULL, values to be substringed
-#' @param y.z  A character or 0.digit to call substr
+#' @param yz  A character or 0.digit to call substr
 #' @return A string or NULL
 #' @examples
 #'
@@ -197,8 +206,10 @@
 #' @param d tibble
 #' @return A tibble
 #' @examples
+#' \dontrun{
 #' library(magrittr)
 #' iris %>% tolower_names %>% head
+#' }
 #' @export
 tolower_names <- function(d){
   nd <- names(d)
@@ -211,8 +222,11 @@ tolower_names <- function(d){
 #' @param d tibble
 #' @return A tibble
 #' @examples
+#' \dontrun{
 #' library(magrittr)
 #' iris %>% toupper_names %>% head
+#' }
+#'
 #' @export
 toupper_names <- function(d){
   nd <- names(d)
@@ -328,6 +342,12 @@ toupper_names <- function(d){
 }
 
 #' @title  Run transcoder shiny app
+#'
+#' @importFrom shiny runApp
+#'
+#' @param launch.browser Logical. Indique si l'application doit être ouverte
+#' dans le navigateur web par défaut. Par défaut, utilise l'option globale
+#' \code{shiny.launch.browser}, ou \code{interactive()} si celle-ci n'est pas définie.
 #'
 #' @export
 run_transcoder <- function(launch.browser = getOption("shiny.launch.browser", interactive())) {

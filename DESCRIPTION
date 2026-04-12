@@ -1,7 +1,7 @@
 Package: stringfix
 Type: Package
 Title: Strings manipulations in a piping way of coding
-Version: 0.1.0
+Version: 0.1.1
 Author: Guillaume Pressiat
 Authors@R: c(person('Guillaume Pressiat', role = c("aut", "cre"), email = "guillaume.pressiat@chu-brest.fr"))
 Maintainer: Guillaume Pressiat <guillaume.pressiat@chu-brest.fr>
@@ -9,7 +9,8 @@ Description: Some infix operators and other utility functions to make syntax mor
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.3
 Imports: stringr, tibble
+Depends: shiny
 URL: https://guillaumepressiat.github.io/stringfix/
 BugReports: https://github.com/GuillaumePressiat/stringfix/issues

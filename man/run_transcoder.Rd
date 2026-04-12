@@ -8,6 +8,11 @@ run_transcoder(
   launch.browser = getOption("shiny.launch.browser", interactive())
 )
 }
+\arguments{
+\item{launch.browser}{Logical. Indique si l'application doit être ouverte
+dans le navigateur web par défaut. Par défaut, utilise l'option globale
+\code{shiny.launch.browser}, ou \code{interactive()} si celle-ci n'est pas définie.}
+}
 \description{
 Run transcoder shiny app
 }

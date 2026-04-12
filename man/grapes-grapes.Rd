@@ -10,9 +10,9 @@ a \% \% b
 a \%,\% b
 }
 \arguments{
-\item{x}{A string (or coerced to)}
+\item{a}{A string (or coerced to)}
 
-\item{y}{A string (or coerced to)}
+\item{b}{A string (or coerced to)}
 }
 \value{
 The concatenation of \code{x} and \code{y} strings
@@ -26,6 +26,12 @@ This functions is a pipe version of paste
 \examples{
 'Hello' \% \% 'world'
 'Your pastas taste like' \% \% '\%>\%'
+
 'Hello' \%,\% 'world...'
+
+\dontrun{
+library(magrittr)
 'Your pastas taste like ' \%+\% '\%>\%...' \%,\% 'or \%>>\%...'
+}
+
 }
